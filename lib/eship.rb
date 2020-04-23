@@ -1,7 +1,11 @@
+# frozen_string_literal: true
+
 require 'eship/version.rb'
+require 'eship/api_client.rb'
+require 'eship/endpoints.rb'
+require 'eship/quotation.rb'
 
 module Eship
-
   def self.config
     yield self
   end

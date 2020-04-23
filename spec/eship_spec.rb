@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Eship do
   it 'configures eship gem' do
     # Given
@@ -15,8 +17,7 @@ RSpec.describe Eship do
     expect(Eship.eship_key).to eq eship_key
   end
 
-  it "has a version number" do
+  it 'has a version number' do
     expect(Eship::VERSION).not_to be nil
   end
-
 end
