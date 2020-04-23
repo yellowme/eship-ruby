@@ -1,8 +1,6 @@
 # Eship::Ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/eship/ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Eship-ruby es una gema para interactuar con la API de segmail proporciona a través del servicio de paqueterías Eship. Con esta gema es posible generar una orden en el `dashboard` del servicio y continuar el proceso manualmente sin tener que ingresar los datos del remitente y el destinatario de manera manual.
 
 ## Installation
 
