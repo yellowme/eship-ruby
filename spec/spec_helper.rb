@@ -1,5 +1,8 @@
 require "bundler/setup"
+require 'simplecov'
 require "eship"
+
+SimpleCov.start { add_filter '/spec/' }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -10,5 +13,10 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before(:all) do
+    Eship.base_uri = 'https://app.myeship.co/API/'
+    Eship.eship_key = '99000033'
   end
 end
