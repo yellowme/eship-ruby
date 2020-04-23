@@ -18,7 +18,6 @@ module Eship
     @base_uri = base_uri
   end
 
-
   def self.eship_key
     @eship_key
   end
