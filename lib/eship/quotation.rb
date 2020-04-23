@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 module Eship
-  def self.post_quotation
-    response = ApiClient.post(path: Endpoints.quotation)
+  def self.post_quotation(payload)
+    response = ApiClient.post(
+      path: Endpoints::POST_QUOTATION,
+      body: payload.to_json
+    )
   end
 end
