@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "eship/ruby"
+require "eship"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
