@@ -4,7 +4,7 @@ module Eship
   def self.post_quotation(payload)
     response = ApiClient.post(
       path: Endpoints::POST_QUOTATION,
-      body: payload.to_json
+      body: payload
     )
   end
 end
