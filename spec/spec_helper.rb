@@ -20,6 +20,6 @@ RSpec.configure do |config|
 
   config.before(:all) do
     Eship.base_uri = 'https://app.myeship.co/API/'
-    Eship.eship_key = '99000033'
+    Eship.eship_key = 'Randomkey12x'
   end
 end
