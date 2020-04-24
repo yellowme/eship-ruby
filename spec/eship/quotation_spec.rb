@@ -68,7 +68,6 @@ RSpec.describe Eship do
 
     it 'Generates an order in the eship panel' do
       response = Eship.post_quotation(payload)
-      p response
       #Check origin address
       expect(parsed_payload['address_from']['name']).to eq response['address_from']['name']
       expect(parsed_payload['address_from']['phone']).to eq response['address_from']['phone']
@@ -88,6 +87,39 @@ RSpec.describe Eship do
       expect(parsed_payload['address_to']['zip']).to eq response['address_to']['zip']
 
       expect(response['save_order']).to eq 1
+      expect(response).to have_key('parcels')
+      expect(response).to have_key('items')
+    end
+  end
+
+  context 'With invalid payload' do
+    let(:invalid_payload){
+      {
+        "address_from":{
+          "name":"Grupo Rico",
+          "phone":"0120120120",
+          "street1":"Algo 01",
+          "city":"Mexico",
+          "state":"Ciudad de Mexico",
+          "country":"MX",
+          "zip":"01090"
+        }
+      }
+    }
+
+    let(:response){ {"Error"=>"address_to is required.parcels array is required."} }
+
+    before do
+      #WebMock.allow_net_connect!
+      stub_request(:post, "#{Eship.base_uri}#{Eship::Endpoints::POST_QUOTATION}").to_return(
+        status: 200,
+        body: response.to_json
+      )
+    end
+
+    it 'fails gracefully' do
+      response = Eship.post_quotation(invalid_payload)
+      expect(response).to have_key('Error')
     end
   end
 end
