@@ -2,7 +2,6 @@
 
 require 'eship/version.rb'
 require 'eship/api_client.rb'
-require 'eship/connection.rb'
 require 'eship/endpoints.rb'
 require 'eship/quotation.rb'
 
