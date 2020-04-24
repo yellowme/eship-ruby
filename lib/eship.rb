@@ -27,6 +27,6 @@ module Eship
   end
 
   def self.eship_key=(eship_key)
-    @eship_key = eship_key
+    @eship_key = eship_keys
   end
 end
