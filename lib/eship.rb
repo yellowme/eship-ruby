@@ -24,6 +24,6 @@ module Eship
   end
 
   def self.eship_key=(eship_key)
-    @eship_key = cacao_key
+    @eship_key = eship_key
   end
 end
