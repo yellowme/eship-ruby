@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Yellowme']
   spec.email         = ['hola@yellowme.mx']
 
-  spec.summary       = 'Eship-ruby es una gema para interactuar con la API de segmail proporciona a través del servicio de paqueterías Eship.'
-  spec.description   = 'con Eship-ruby es posible generar una orden en el `dashboard` del servicio sin tener que ingresar los datos del remitente y el destinatario de manera manual.'
+  spec.summary       = 'Eship-ruby provides a layer to interact with the Segmail API throug the Eship parcels service'
+  spec.description   = 'with Eship-ruby you can generate an order in the `dashboard` without the need to enter all the data manually.'
   spec.homepage      = 'https://yellowme.mx'
 
   # Specify which files should be added to the gem when it is released.
