@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Eship-ruby provides a layer to interact with the Segmail API throug the Eship parcels service'
   spec.description   = 'with Eship-ruby you can generate an order in the `dashboard` without the need to enter all the data manually.'
-  spec.homepage      = 'https://yellowme.mx'
+  spec.homepage      = 'https://github.com/yellowme/eship-ruby'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
