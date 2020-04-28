@@ -19,7 +19,7 @@ Or install it yourself as:
     $ gem install eship-ruby
 
 ## Usage
-During the setup configuration you must add your eship api-key.
+During the setup configuration you must add your eship api-key and the base URI.
 ```sh
     Eship.config do |config|
         config.base_uri = 'https://app.myeship.co/API/'
@@ -31,12 +31,6 @@ Eship-ruby expects the payload as described in the eship documentation https://m
 ```sh
 response = Eship.post_quotation(payload)
 ```
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
