@@ -19,8 +19,18 @@ Or install it yourself as:
     $ gem install eship-ruby
 
 ## Usage
-
-TODO: Write usage instructions here
+During the setup configuration you must add your eship api-key.
+```sh
+    Eship.config do |config|
+        config.base_uri = 'https://app.myeship.co/API/'
+        config.eship_key = 'Randomkey12x'
+    end
+```
+### making querys
+Eship-ruby expects the payload as described in the eship documentation https://myeship.co/docs/
+```sh
+response = Eship.post_quotation(payload)
+```
 
 ## Development
 
