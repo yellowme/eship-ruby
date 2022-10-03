@@ -29,4 +29,12 @@ module Eship
   def self.eship_key=(eship_key)
     @eship_key = eship_key
   end
+
+  def self.verbose
+    @verbose || false
+  end
+
+  def self.verbose=(verbose)
+    @verbose = verbose
+  end
 end

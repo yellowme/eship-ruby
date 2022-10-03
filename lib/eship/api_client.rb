@@ -13,7 +13,7 @@ module Eship
     def self.post(path:, body: {}, headers: {})
       path = "#{Eship.base_uri}#{path}"
       headers = headers.merge(ApiClient.default_headers)
-      response = HTTParty.post(path, body: body.to_json, headers: headers)
+      response = HTTParty.post(path, body: body.to_json, headers: headers, :debug_output => Eship.verbose ? $stdout :  $stderr)
       JSON.parse(response.body)
     end
 
@@ -21,6 +21,14 @@ module Eship
     class ImmutableKey < String 
       def capitalize 
         self 
+      end
+
+      def downcase
+        self
+      end
+
+      def split(*)
+        super.map { |s| self.class.new(s) }
       end
 
       def to_s
